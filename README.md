@@ -13,10 +13,6 @@ After some recent success of Bayesian methods in machine-learning competitions, 
 
 If Bayesian inference is the destination, then mathematical analysis is a particular path to towards it. On the other hand, computing power is cheap enough that we can afford to take an alternate route via probabilistic programming. The latter path is much more useful, as it denies the necessity of mathematical intervention at each step, that is, we remove often-intractable mathematical analysis as a prerequisite to Bayesian inference. Simply put, this latter computational path proceeds via small intermediate jumps from beginning to end, where as the first path proceeds by enormous leaps, often landing far away from our target. Furthermore, without a strong mathematical background, the analysis required by the first path cannot even take place.
 
-
-<div style="float: right; margin-left: 30px;"><img style="float: right;margin-left: 30px;" src="http://i.imgur.com/nSugSG0.png" align=right height = 350 /></div>
-
-
 *Bayesian Methods for Hackers* is designed as a introduction to Bayesian inference from a computational/understanding-first, and mathematics-second, point of view. Of course as an introductory book, we can only leave it at that: an introductory book. For the mathematically trained, they may cure the curiosity this text generates with other texts designed with mathematical analysis in mind. For the enthusiast with less mathematical-background, or one who is not interested in the mathematics but simply the practice of Bayesian methods, this text should be sufficient and entertaining.
 
 The choice of PyMC as the probabilistic programming language is two-fold. As of this writing, there is currently no central resource for examples and explanations in the PyMC universe. The official documentation assumes prior knowledge of Bayesian inference and probabilistic programming. We hope this book encourages users at every level to look at PyMC. Secondly, with recent core developments and popularity of the scientific stack in Python, PyMC is likely to become a core component soon enough.
@@ -96,21 +92,24 @@ this book, though it comes with some dependencies.
     -  IPython v0.13 (or greater) is a requirement to view the ipynb files. It can be downloaded [here](http://ipython.org/). IPython notebooks can be run by `(your-virtualenv) ~/path/to/the/book/Chapter1_Introduction $ ipython notebook`
     -  For Linux users, you should not have a problem installing NumPy, SciPy, Matplotlib and PyMC. For Windows users, check out [pre-compiled versions](http://www.lfd.uci.edu/~gohlke/pythonlibs/) if you have difficulty. 
     -  In the styles/ directory are a number of files (.matplotlirc) that used to make things pretty. These are not only designed for the book, but they offer many improvements over the default settings of matplotlib.
-    -  while technically not required, it may help to run the IPython notebook with `ipython notebook --pylab inline` flag if you encounter io errors.
 2. The second, preferred, option is to use the nbviewer.ipython.org site, which display IPython notebooks in the browser ([example](http://nbviewer.ipython.org/urls/raw.github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/master/Chapter1_Introduction/Chapter1_Introduction.ipynb)).
 The contents are updated synchronously as commits are made to the book. You can use the Contents section above to link to the chapters.
  
-3. **PDF versions are available! Look in the PDF/ directory.** PDFs are the least-prefered method to read the book, as pdf's are static and non-interactive. If PDFs are desired, they can be created dynamically using Chrome's builtin print-to-pdf feature or using the [nbconvert](https://github.com/ipython/nbconvert) utility.
+3. PDFs are the least-prefered method to read the book, as pdf's are static and non-interactive. If PDFs are desired, they can be created dynamically using the [nbconvert](https://github.com/ipython/nbconvert) utility.
  
 
 Installation and configuration
 ------
+
+
 If you would like to run the IPython notebooks locally, (option 1. above), you'll need to install the following:
+
 -  IPython 0.13+ is a requirement to view the ipynb files. It can be downloaded [here](http://ipython.org/ipython-doc/dev/install/index.html) 
 - Necessary packages are PyMC 2.2, NumPy, SciPy and Matplotlib.   
    -  For Linux/OSX users, you should not have a problem installing the above, [*except for Matplotlib on OSX*](http://www.penandpants.com/2012/02/24/install-python/).
    -  For Windows users, check out [pre-compiled versions](http://www.lfd.uci.edu/~gohlke/pythonlibs/) if you have difficulty. 
    - also recommended, for data-mining exercises, are [PRAW](https://github.com/praw-dev/praw) and [requests](https://github.com/kennethreitz/requests). 
+- New to Python or IPython, and help with the namespaces? Check out [this answer](http://stackoverflow.com/questions/12987624/confusion-between-numpy-scipy-matplotlib-and-pylab). 
 
 -  In the styles/ directory are a number of files that are customized for the notebook. 
 These are not only designed for the book, but they offer many improvements over the 
@@ -170,7 +169,13 @@ Authors | | | |
 [Thomas Bratt](https://github.com/thomasbratt) |  [Nisan Haramati](https://github.com/nisanharamati) |  [Robert Grant](https://github.com/bgrant) | [Matthew Wampler-Doty](https://github.com/xcthulhu)
 [Yaroslav Halchenko](https://github.com/yarikoptic) |  [Alex Garel](https://github.com/alexgarel) | [Oleksandr Lysenko](https://twitter.com/sash_ko) |  [liori](https://github.com/liori)
 [ducky427](https://github.com/ducky427) |  [Pablo de Oliveira Castro](https://github.com/pablooliveira) | [sergeyfogelson](https://github.com/sergeyfogelson) |  [Mattia Rigotti](http://neurotheory.columbia.edu/~mrigotti/)
-[Matt Bauman](https://github.com/mbauman) | [Andrew Duberstein](http://www.andrewduberstein.com/) |  | 
+[Matt Bauman](https://github.com/mbauman) | [Andrew Duberstein](http://www.andrewduberstein.com/) | [Carsten Brandt](http://cebe.cc/) |  [Bob Jansen](http://web2docx.com)
+ [ugurthemaster](https://github.com/ugurthemaster)   | [William Scott](https://github.com/williamscott)   |  [Min RK](http://twitter.com/minrk)  |  [Bulwersator](https://github.com/Bulwersator)
+  [elpres](https://github.com/elpres)  |  [Augusto Hack](https://github.com/hackaugusto)  | [Michael Feldmann](https://github.com/michaf)   | [Youki](https://github.com/Youki)
+   [Jens Rantil](http://jensrantil.github.io) |  [Kyle Meyer](http://kyleam.com)  |  [Eric Martin](http://ericmart.in)  | [Inconditus](https://github.com/Inconditus)
+ [Kleptine](https://github.com/Kleptine)   |  [Stuart Layton](https://github.com/slayton)  |  [Antonino Ingargiola](https://github.com/tritemio)  |  [vsl9](https://github.com/vsl9)
+  [Tom Christie](https://github.com/tom-christie)  |  [bclow](https://github.com/bclow)  |  [Simon Potter](http://sjp.co.nz/)  | [Garth Snyder](https://github.com/GarthSnyder)
+ [Daniel Beauchamp](http://twitter.com/pushmatrix)  |  [Philipp Singer](http://www.philippsinger.info)  | [gbenmartin](https://github.com/gbenmartin) | 
 
 We would like to thank the Python community for building an amazing architecture. We would like to thank the 
 statistics community for building an amazing architecture. 
